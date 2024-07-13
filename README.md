@@ -1,8 +1,8 @@
 # Sprint 2 y 3 - MJLL
 
-Ehub - de "Entertainment" y "Hub"
-Maria Jose Lopez Llano
-mahou.png @ discord
+* Ehub - de "Entertainment" y "Hub"
+* Maria Jose Lopez Llano
+* mahou.png @ discord
 
 ## Descripcion
 
