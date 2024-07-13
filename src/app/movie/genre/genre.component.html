@@ -1,0 +1,14 @@
+<h4>{{genreTitle}}</h4>
+<hr>
+
+<!-- Lista de películas -->
+<ul>
+    <!-- Itera sobre la lista de películas -->
+    <li *ngFor="let movie of movies" class="text-center">
+        <!-- Enlace a la página de la película -->
+        <a href="movies/{{movie.id}}">
+            <!-- Imagen de la película -->
+            <img [src]="movie.image">
+        </a>
+    </li>
+</ul>

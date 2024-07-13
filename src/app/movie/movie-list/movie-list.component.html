@@ -1,0 +1,14 @@
+<ul>
+  <li *ngFor="let movie of movies" class="text-center">
+    <a [routerLink]="movie.id">
+         <img [src]="movie.image">
+    </a>
+    <div class="text-center">
+        <button class="btn" (click)="hiddenMovie(+movie.id)">Ocultar</button>
+    </div>
+  </li>
+</ul>
+<!-- Itera sobre cada película en el arreglo movies -->
+<!-- Enlace a la página de detalles de la película usando su ID -->
+<!-- Muestra la imagen de la película -->
+<!-- Botón para ocultar la película, llamando a la función hiddenMovie con el ID de la película -->

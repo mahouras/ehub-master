@@ -1,0 +1,36 @@
+<div *ngIf="movie">
+  <!-- Se muestra si existe una película -->
+  <ng-container *ngTemplateOutlet="movieTemplate; context: { $implicit: movie }"></ng-container>
+</div>
+
+<ng-template #movieTemplate let-movie>
+  <!-- Plantilla para mostrar detalles de la película -->
+  <img [src]="movie.image" /> <!-- Enlace de propiedad correcto [src] -->
+  <div>
+    <button class="btn" (click)="toggleFavorite(movie.id)">
+      {{ isFavorite(movie.id) ? 'Quitar de favorito' : 'Agregar a favorito' }}
+    </button>
+  </div>
+  <h1>{{ movie.name }}</h1>
+  <h2>{{ movie.genre }} | {{ movie.releaseYear }}</h2>
+  <p>{{ movie.about }}</p>
+</ng-template>
+
+<div>
+  <!-- Sección de películas recomendadas -->
+  <h4>Películas recomendadas</h4>
+  <hr style="width:100%">
+  <div class="moviesRelated">
+    <span class="content">
+      <ul>
+        <li *ngFor="let movier of moviesRelated" class="text-center">
+          <a href="movies/{{movier.id}}">
+            <img [src]="movier.image">
+          </a>
+        </li>
+      </ul>
+    </span>
+  </div>
+</div>
+
+<br><br><br>

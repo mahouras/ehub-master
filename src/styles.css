@@ -1,0 +1,88 @@
+html, body, main {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+main{
+    max-width: 920px;
+    margin: 90px auto 0;
+}
+
+li {
+    list-style:none;
+}
+
+a{
+    color: rgb(214, 86, 0);
+    text-decoration: none;
+}
+
+/*--------------------------------*/
+.menu {
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    padding: 5px;
+    background-color: lightgrey;
+}
+.menu nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu nav a {
+    color: black;
+    cursor: pointer;
+}
+.menu nav a:hover {
+    color: orangered;
+}
+.btn {
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    background-color: orange;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: yellow;
+}
+.text-center {
+    text-align: center;
+}
+.flex {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.card-btn {
+    cursor: pointer;
+}
+.card,.card-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid lightgrey;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+.card-btn:hover {
+    background-color: yellow;
+}

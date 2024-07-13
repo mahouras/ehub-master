@@ -1,0 +1,22 @@
+<!-- Título para la sección de favoritos -->
+<h4>Favoritos</h4>
+<hr>
+
+<!-- Lista de películas favoritas, solo se muestra si hay al menos una película en favoritos -->
+<ul *ngIf="favoriteMovies.length > 0">
+    <!-- Itera sobre la lista de películas favoritas -->
+    <li *ngFor="let movie of favoriteMovies" class="text-center">
+        <!-- Enlace a la página de la película, utilizando el ID de la película -->
+        <a href="movies/{{movie.id}}">
+            <!-- Muestra la imagen de la película -->
+            <img [src]="movie.image">
+        </a>
+        <div class="text-center">
+            <!-- Botón para quitar la película de favoritos, llama a la función removeFavorite con el ID de la película -->
+            <button class="btn" (click)="removeFavorite(+movie.id)">Quitar de favorito</button>
+        </div>
+    </li>
+</ul>
+
+<!-- Mensaje que se muestra si no hay películas favoritas -->
+<div *ngIf="favoriteMovies.length < 1">Aún no tienes ningún favorito</div>

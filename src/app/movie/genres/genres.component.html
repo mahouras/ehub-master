@@ -1,0 +1,8 @@
+<h4>Géneros</h4>
+<!-- Contenedor flex para la lista de géneros -->
+<div *ngIf="genres$ | async as genres" class="flex">
+    <!-- Enlace para cada género en la lista -->
+    <a *ngFor="let genre of genres" class="card-btn" href="genre/{{genre}}">
+        <li>{{genre}}</li>
+    </a>
+</div>

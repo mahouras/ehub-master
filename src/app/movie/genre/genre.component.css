@@ -1,0 +1,18 @@
+img{
+    max-width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 20 px 0 px;
+    justify-content: center;
+}
+
+li {
+    margin: 10px;
+    width: 200px;
+}
